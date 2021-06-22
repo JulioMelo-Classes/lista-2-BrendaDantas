@@ -1,7 +1,7 @@
 # Lista de exercicio de Ranges
 
 Os conteúdos da lista de exercício estão no repositório: [Lista 2](https://github.com/JulioMelo-Classes/LP1-2021.1-Lista2.git), clone esse repositório em sua máquina e copie
-os diretórios de cada questão. Usaremos esse formato para evitar os problemas de atualização que ocorreram na Lista 1. Caso hajam atualizações a serem feitas, vocês mesmos
+os diretórios de cada questão. Usaremos esse formato para evitar os problemas de atualização que ocorreram na Lista 1. Caso hajam atualizações a serem feitas, vocês mesmosgi
 irão atualizar os diretórios das suas questões fazendo o download novamente do diretório original (atualizado) e substituindo os arquivos necessários.
 
 # Resolvendo as questões
