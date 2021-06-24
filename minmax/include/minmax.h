@@ -7,6 +7,8 @@ using std::pair;
 using std::distance;
 #include <algorithm>
 using std::sort;
+#include <vector>
+using namespace std;
 
 namespace graal {
 
@@ -23,12 +25,36 @@ namespace graal {
  * @return Um std::pair contendo o menor e maior elemento, nesta ordem
  *
  */
-template <typename Itr, typename Compare >
-std::pair<Itr, Itr> minmax( Itr first, Itr last, Compare cmp )
-{
-    // TODO
-    return std::make_pair( first, first );
-}
 
+std::vector<string>;
+
+  bool cmp(const string &a, const string &b)
+  {
+    return (a < b);
+  }
+
+  template <typename Itr, typename Compare >
+  std::pair<Itr, Itr> minmax(Itr first, Itr last, Compare cmp)
+  {  
+    auto max = *first;
+    auto min = *last;
+
+    for (Itr i = first; i != last; i++)
+    {
+      if (i == 0) 
+      {
+        return std::make_pair(first, first);
+      }
+
+      else 
+
+        cmp(*first, *last);
+      
+      return(max, min);
+
+    return (first, last);
+
+    }
+  }
 }
 #endif
