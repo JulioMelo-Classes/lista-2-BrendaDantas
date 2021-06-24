@@ -20,7 +20,7 @@ InputIt copy(InputIt first, InputIt last, InputIt d_first)
   {
     *d_first = *first;
     d_first++;
-    first++;
+    first--;
   }
 
     return d_first;
