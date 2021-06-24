@@ -29,26 +29,26 @@ namespace graal {
     return (a < b);
   }
 
-  template <typename Itr, typename Compare >
-  std::pair<Itr, Itr> minmax(Itr first, Itr last, Compare cmp)
-  {  
-    auto max = *first;
-    auto min = *last;
+template <typename Itr, typename Compare >
+std::pair<Itr, Itr> minmax(Itr first, Itr last, Compare cmp)
+{  
+  Itr max = first;
 
-    for (Itr i = first; i != last; i++)
+  for (Itr i = first; i != last; i++)
+  {
+    if (*i == 0) 
     {
-      if (i == 0) 
-      {
-        return std::make_pair(first, first);
-      }
-
-      else 
-
-        cmp(*first, *last);
-      
-      return(max, min);
-
+      return std::make_pair(first, first);
     }
+
+    else if (cmp(*i, *max)) 
+    {
+      max = i;
+
+      return std::pair<Itr, Itr>(i, max);
+    }
+      
   }
+}
 }
 #endif
