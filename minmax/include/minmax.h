@@ -24,31 +24,34 @@ namespace graal {
  *
  */
 
-  bool cmp(const std::string &a, const std::string &b)
-  {
-    return (a < b);
-  }
-
 template <typename Itr, typename Compare >
 std::pair<Itr, Itr> minmax(Itr first, Itr last, Compare cmp)
 {  
-  Itr max = first;
 
-  for (Itr i = first; i != last; i++)
+    Itr menor_elemento = first; // eu sempre uso o conteúdo do menor_elemento
+    Itr maior_elemento = first;
+
+  if (first == last) 
   {
-    if (*i == 0) 
+    return std::make_pair(first, first);
+  }    
+
+  for (auto it = first; it != last; it++) 
+  {
+    if (cmp(*it, *menor_elemento)) //*it < *menor_elemento
+    //if(cmp(*menor_elemento, *it)) -  *menor_elemento < *it
     {
-      return std::make_pair(first, first);
+      menor_elemento = it;
     }
 
-    else if (cmp(*i, *max)) 
+    if (cmp(*menor_elemento, *it)) 
     {
-      max = i;
-
-      return std::pair<Itr, Itr>(i, max);
+      maior_elemento = it;
     }
-      
   }
+
+  return std::make_pair(menor_elemento, maior_elemento);
 }
 }
+
 #endif
