@@ -26,7 +26,7 @@ namespace graal {
 
   bool cmp(const std::string &a, const std::string &b)
   {
-    return (a > b);
+    return (a < b);
   }
 
 template <typename Itr, typename Compare >
