@@ -22,6 +22,7 @@ InputIt copy(InputIt first, InputIt last, InputIt d_first)
     d_first++;
     first++;
   }
+
     return d_first;
     // TODO
     return first;
