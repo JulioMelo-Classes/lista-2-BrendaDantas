@@ -7,8 +7,6 @@ using std::pair;
 using std::distance;
 #include <algorithm>
 using std::sort;
-#include <vector>
-using namespace std;
 
 namespace graal {
 
@@ -26,9 +24,7 @@ namespace graal {
  *
  */
 
-std::vector<string>;
-
-  bool cmp(const string &a, const string &b)
+  bool cmp(const std::string &a, const std::string &b)
   {
     return (a < b);
   }
@@ -51,8 +47,6 @@ std::vector<string>;
         cmp(*first, *last);
       
       return(max, min);
-
-    return (first, last);
 
     }
   }
