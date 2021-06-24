@@ -36,8 +36,20 @@ std::pair<Itr, Itr> minmax(Itr first, Itr last, Compare cmp)
     return std::make_pair(first, first);
   }    
 
-  for (auto it = first; it != last; it++) 
+  if (*first == *(last-1))
   {
+    for (auto itr2 = first; itr2 != last; itr2++) 
+    {
+      if (*itr2 == *(last-1))
+        {  
+          itr2++;          
+          return std::make_pair(first, (last-1));
+        }
+    }
+  }
+  
+  for (auto it = first; it != last; it++) 
+  {        
     if (cmp(*it, *menor_elemento)) //*it < *menor_elemento
     //if(cmp(*menor_elemento, *it)) -  *menor_elemento < *it
     {
@@ -49,7 +61,6 @@ std::pair<Itr, Itr> minmax(Itr first, Itr last, Compare cmp)
       maior_elemento = it;
     }
   }
-
   return std::make_pair(menor_elemento, maior_elemento);
 }
 }
