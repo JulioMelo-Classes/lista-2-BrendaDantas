@@ -16,10 +16,9 @@ namespace graal {
 
 template<class BidirIt>
 void reverse(BidirIt first, BidirIt last)
-{
+{ 
   BidirIt iterator = first;
-  BidirIt iterator2 = last-1;
-  while (iterator != iterator2)
+  for (BidirIt iterator2 = last-1; (iterator2-1) != first; last--) 
   {
     std::iter_swap(iterator, iterator2);
     iterator++;
