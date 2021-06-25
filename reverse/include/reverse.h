@@ -18,10 +18,21 @@ template<class BidirIt>
 void reverse(BidirIt first, BidirIt last)
 { 
   BidirIt iterator = first;
-  for (BidirIt iterator2 = last-1; (iterator2-1) != first; iterator2--) 
+  BidirIt iterator2 = last-1;
+  int tamanho_range = 0;
+
+  for (BidirIt iterator3 = first; iterator3 != last; iterator3++) 
+  {
+    tamanho_range++;
+  }
+
+  int tam = tamanho_range/2;
+
+  for (int i = 0; i < tam; i++)
   {
     std::iter_swap(iterator, iterator2);
     iterator++;
+    iterator2--;
   }
 }
 
