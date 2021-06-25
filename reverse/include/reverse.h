@@ -13,10 +13,18 @@ namespace graal {
 /*! 
  * TODO: documentação no estilo doxygen
  */
+
 template<class BidirIt>
 void reverse(BidirIt first, BidirIt last)
 {
-    // TODO
+  for (BidirIt iterator = first; iterator != last; iterator++)
+  {
+    for (BidirIt iterator2 = last-1; iterator2 != first; iterator2--)
+    {
+      std::iter_swap(first, last);
+    }
+    
+  }
 }
 
 }
