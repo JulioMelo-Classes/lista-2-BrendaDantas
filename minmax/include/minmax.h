@@ -1,3 +1,7 @@
+#ifndef GRAAL_H
+#define GRAAL_H
+
+#include <utility>
 using std::pair;
 #include <iterator>
 using std::distance;
@@ -26,7 +30,7 @@ std::pair<Itr, Itr> minmax(Itr first, Itr last, Compare cmp)
     Itr maior_elemento = first;
     Itr menor_elemento = first;
     int maior_quantidade = 0;
-    int menor_quantidade = 100000;
+    int menor_quantidade = 1;
     int quantidade_maior = 0;
     int quantidade_menor = 0;  
   
