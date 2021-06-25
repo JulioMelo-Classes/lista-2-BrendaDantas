@@ -29,10 +29,8 @@ std::pair<Itr, Itr> minmax(Itr first, Itr last, Compare cmp)
 {  
     Itr maior_elemento = first;
     Itr menor_elemento = first;
-    int maior_quantidade = 0;
-    int menor_quantidade = 1;
-    int quantidade_maior = 0;
-    int quantidade_menor = 0;  
+    int maior_quantidade = 0, menor_quantidade = 1;
+    int quantidade_maior = 0, quantidade_menor = 0;
   
   for (Itr it = first; it != last; it++) 
   {        
