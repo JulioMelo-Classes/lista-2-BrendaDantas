@@ -1,7 +1,3 @@
-#ifndef GRAAL_H
-#define GRAAL_H
-
-#include <utility>
 using std::pair;
 #include <iterator>
 using std::distance;
@@ -27,40 +23,44 @@ namespace graal {
 template <typename Itr, typename Compare >
 std::pair<Itr, Itr> minmax(Itr first, Itr last, Compare cmp)
 {  
-
-    Itr menor_elemento = first; // eu sempre uso o conteúdo do menor_elemento
     Itr maior_elemento = first;
-
-  if (first == last) 
-  {
-    return std::make_pair(first, first);
-  }    
-
-  if (*first == *(last-1))
-  {
-    for (auto itr2 = first; itr2 != last; itr2++) 
-    {
-      if (*itr2 == *(last-1))
-        {  
-          itr2++;          
-          return std::make_pair(first, (last-1));
-        }
-    }
-  }
+    Itr menor_elemento = first;
+    int maior_quantidade = 0;
+    int menor_quantidade = 100000;
+    int quantidade_maior = 0;
+    int quantidade_menor = 0;  
   
-  for (auto it = first; it != last; it++) 
+  for (Itr it = first; it != last; it++) 
   {        
-    if (cmp(*it, *menor_elemento)) //*it < *menor_elemento
-    //if(cmp(*menor_elemento, *it)) -  *menor_elemento < *it
+    for (Itr it2 = first; it2 != last; it2++) 
     {
+      if (cmp(*it2 , *it) && it != it2) // verificando quantos elementos são menores que it
+      {               
+        quantidade_menor++;          
+      }
+      if (cmp(*it , *it2) && it != it2) // verificando quantos elementos são maiores que it
+      {
+        quantidade_maior++;
+      }
+    }
+
+    if (quantidade_maior <= maior_quantidade)
+    {
+      maior_quantidade = quantidade_maior;
+      maior_elemento = it;
+    } 
+
+    quantidade_maior = 0; 
+
+    if (quantidade_menor < menor_quantidade) 
+    { 
+      menor_quantidade = quantidade_menor;
       menor_elemento = it;
     }
-
-    if (cmp(*menor_elemento, *it)) 
-    {
-      maior_elemento = it;
-    }
-  }
+    
+    quantidade_menor = 0;
+    
+  }  
   return std::make_pair(menor_elemento, maior_elemento);
 }
 }
