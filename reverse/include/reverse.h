@@ -17,13 +17,12 @@ namespace graal {
 template<class BidirIt>
 void reverse(BidirIt first, BidirIt last)
 {
-  for (BidirIt iterator = first; iterator != last; iterator++)
+  BidirIt iterator = first;
+  BidirIt iterator2 = last-1;
+  while (iterator != iterator2)
   {
-    for (BidirIt iterator2 = last-1; iterator2 != first; iterator2--)
-    {
-      std::iter_swap(first, last);
-    }
-    
+    std::iter_swap(iterator, iterator2);
+    iterator++;
   }
 }
 
