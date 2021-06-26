@@ -17,7 +17,7 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 - [ ] Equal
 - [ ] Unique
 - [ ] Partition
-- [ ] Sort
+- [X] Sort
 - [ ] Rotate
 
 
