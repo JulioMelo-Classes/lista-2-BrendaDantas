@@ -12,7 +12,7 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 - [X] Reverse
 - [X] Copy
 - [X] Find_if
-- [ ] Find
+- [X] Find
 - [ ] All/any/none_of
 - [ ] Equal
 - [ ] Unique
