@@ -15,9 +15,15 @@ namespace graal {
  */
 template<class ForwardIt, class UnaryPredicate>
 ForwardIt partition(ForwardIt first, ForwardIt last, UnaryPredicate p)
-{
-    // TODO
-    return last;
+{ 
+  for (ForwardIt iterator = first ; iterator != last; iterator++) 
+  {
+    if (p(*iterator))
+    { 
+      iterator = iterator-1;
+      return last;
+    }
+  }
 }
 
 }
