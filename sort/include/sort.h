@@ -16,7 +16,21 @@ namespace graal {
 template<class ForwardIt, class Comparison>
 void sort(ForwardIt first, ForwardIt last, Comparison cmp)
 {
-    // TODO
+  ForwardIt iterator = first;
+
+  while (iterator != last) 
+  {
+    if (cmp(*iterator, *(iterator+1)))
+    {
+      iterator++;
+    }
+
+    else 
+    {
+      std::iter_swap(iterator, (iterator+1));
+      iterator++;
+    }
+  }
 }
 
 }
