@@ -23,12 +23,9 @@ InputIt find_if(InputIt first, InputIt last, UnaryPredicate p)
     {
       return iterator;
     }
-
-    else 
-    {
-      return last;
-    }
   }
+
+  return last;
 }
 }
 #endif
