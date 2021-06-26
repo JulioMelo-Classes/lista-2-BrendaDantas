@@ -16,30 +16,32 @@ namespace graal {
 template<class ForwardIt>
 ForwardIt rotate(ForwardIt first, ForwardIt n_first, ForwardIt last)
 {
-   ForwardIt auxiliar = first; 
-   ForwardIt auxiliar2 = first;
-   ForwardIt auxiliar3 = first;
-   ForwardIt iterator = first+1;
-   ForwardIt guardar_n_first = n_first;
-   ForwardIt guardar_n_first_anterior = n_first-1;
+  ForwardIt iterator2 = first;
+  ForwardIt iterator4;
+  ForwardIt aux2 = first;
+  ForwardIt valor_n_first = n_first;
+  ForwardIt valor_n_first_menos_um = n_first-1;
 
-   while (*first != *guardar_n_first) 
-   {
-     auxiliar2 = auxiliar3;
-     auxiliar3 = iterator;
-     auxiliar3++;
-     iterator++;     
+  while (*first != *valor_n_first && *(last-1) != (*valor_n_first_menos_um)) 
+  {
+    ForwardIt aux = first;
+    for (ForwardIt iterator = first; iterator != last; iterator++) 
+    {      
+      iterator2 = iterator2+1;
+      iterator2++;
+    }
+    iterator2 = first;
+    *(last-1) = *aux;
+  } 
 
-     if (iterator == (last-1)) 
-     {
-       auxiliar3 = iterator;
-       iterator = auxiliar2;
-       iterator = first+1;  
-       auxiliar3 = first;     
-       auxiliar = auxiliar3;
-     }
-   }
-   //return guardar_n_first_anterior;
+  for (ForwardIt iterator3 = first; iterator3 != last; iterator3++)
+  {
+    if (*iterator3 == *aux2) {
+      iterator4 = iterator3;
+    }
+  }
+
+  return iterator4;
 }
 
 }
