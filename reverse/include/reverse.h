@@ -28,7 +28,7 @@ void reverse(BidirIt first, BidirIt last)
 
   int tam = tamanho_range/2;
 
-  for (int i = 0; i < tam; i++)
+  for (int cont = 0; cont < tam; cont++)
   {
     std::iter_swap(iterator, iterator2);
     iterator++;
