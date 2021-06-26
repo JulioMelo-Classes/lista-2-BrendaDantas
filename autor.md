@@ -11,7 +11,7 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 - [X] Minmax
 - [X] Reverse
 - [X] Copy
-- [ ] Find_if
+- [X] Find_if
 - [ ] Find
 - [ ] All/any/none_of
 - [ ] Equal
