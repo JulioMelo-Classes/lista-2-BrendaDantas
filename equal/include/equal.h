@@ -18,7 +18,7 @@ bool equal(InputIt1 first1, InputIt1 last1, InputIt2 first2, Equal eq)
 {
   while (first1 != last1)
   {
-    if (first1 > first2) 
+    if (first1 > first2 || first1 < first2) 
     {
       break;
     }
@@ -39,7 +39,7 @@ bool equal(InputIt1 first1, InputIt1 last1,
 {
   while (first1 != last2)
   {
-    if (first1 > first2) 
+    if (first1 > first2 || first1 < first2) 
     {
       break;
     }
