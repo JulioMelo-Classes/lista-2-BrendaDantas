@@ -14,7 +14,7 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 - [X] Find_if
 - [X] Find
 - [ ] All/any/none_of
-- [ ] Equal
+- [X] Equal
 - [ ] Unique
 - [ ] Partition
 - [X] Sort
