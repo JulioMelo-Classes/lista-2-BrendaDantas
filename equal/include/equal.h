@@ -11,7 +11,13 @@ using std::sort;
 namespace graal {
 
 /*! 
- * TODO: documentação no estilo doxygen
+ * @brief Two overloaded functions whose the first one receive a range and a pointer to another range and verify if all the elements of the beginning of the second range and the sum of the first element of the second range with the last element of the first range minus the first element of the first range. The second function receive two ranges and verify if all the elements of the first range are equal to all the elements of the second range.
+
+  * @tparam InputIt = iterator to the range.
+  * @param Equal = function to verify if two elements are equal to each others.
+  * @param first1 and first2 = pointer that points to the first elements of the ranges.
+  * @param last1 and last2 = pointer that points to the last elements of the ranges.
+  * @return true when they are equal and false when they aren't.
  */
 template<class InputIt1, class InputIt2, class Equal>
 bool equal(InputIt1 first1, InputIt1 last1, InputIt2 first2, Equal eq)
