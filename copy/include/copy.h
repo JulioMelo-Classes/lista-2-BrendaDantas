@@ -11,7 +11,14 @@ using std::sort;
 namespace graal {
 
 /*! 
- * TODO: documentação no estilo doxygen
+  * @brief Function that copies a range values into a new range that begins in d_first.
+
+  * @tparam InputIt = iterator to the range.
+  * @param first = pointer that points to the first element of the range.
+  * @param last = pointer that points to the position after the last element.
+  * @param d_first = pointer to the addres just after the last element of the range.
+  * @return InputIt = iterator to the new range.
+
  */
 template<class InputIt>
 InputIt copy(InputIt first, InputIt last, InputIt d_first)
