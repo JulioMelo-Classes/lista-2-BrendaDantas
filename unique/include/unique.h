@@ -12,7 +12,14 @@ using std::sort;
 namespace graal {
 
 /*! 
- * TODO: documentação no estilo doxygen
+ * @brief Function that receives a range and reorder this range in a way that the elements in this new order are unique. 
+
+  * @tparam InputIt = iterator to the range.
+  * @param Equal = function that compares if two elements are equal.
+  * @param first = pointer that points to the first element of the range.
+  * @param last = pointer that points to the position after the last element.
+  * @param iterator2 = runs through the range.
+  * @return iterator to the element just after the last element of the range after all this process.
  */
 template<class InputIt, class Equal>
 InputIt unique( InputIt first, InputIt last, Equal eq )
