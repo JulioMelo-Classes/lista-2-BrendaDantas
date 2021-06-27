@@ -11,7 +11,15 @@ using std::sort;
 namespace graal {
 
 /*! 
- * TODO: documentação no estilo doxygen
+ * @brief Function that receives a range and reorder this range in a way that the elements that satisfy the predicate come before the elements that doesn't.
+
+  * @tparam ForwardIt = iterator to the range.
+  * @param UnaryPredicate = iterator to the predicate.
+  * @param first = pointer that points to the first element of the range.
+  * @param last = pointer that points to the position after the last element.
+  * @param p = verify the predicate.
+  * @param iterator1 and iterator2 = runs trough the range verifying the predicate.
+  * @return the iterator1 with the range in a new order.
  */
 template<class ForwardIt, class UnaryPredicate>
 ForwardIt partition(ForwardIt first, ForwardIt last, UnaryPredicate p)
