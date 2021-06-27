@@ -13,7 +13,7 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 - [X] Copy
 - [X] Find_if
 - [X] Find
-- [ ] All/any/none_of
+- [X] All/any/none_of
 - [X] Equal
 - [ ] Unique
 - [X] Partition
