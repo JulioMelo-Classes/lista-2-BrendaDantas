@@ -11,16 +11,16 @@ using std::sort;
 namespace graal {
 
 /*! 
- * Exemplo de documentação seguindo o formato Doxygen
+ * @brief Function that finds and returns the first occurrence of the minor and the greater elements in the range.
  *
- * @tparam Itr iterator para o range.
- * @tparam Compare o tipo de uma função bool(const T &a, const T &b)
+ * @tparam Itr iterator to the range.
+ * @tparam Compare type of a boolean function that compares two elements.
  *
- * @param first Ponteiro para o primeiro elemento do range
- * @param last Ponteiro para a posição logo após o último elemento do range
- * @param cmp A função de comparação que retorna true quando o primeiro parâmetro é menor do que o segundo
+ * @param first pointer to the first element of the range.
+ * @param last pointer to the position just after the last element of the range.
+ * @param cmp function of comparison that returns true when the first parameter is minor than the second one.
  *
- * @return Um std::pair contendo o menor e maior elemento, nesta ordem
+ * @return a std::pair that contains the minor and greater element, in this order. 
  *
  */
 
