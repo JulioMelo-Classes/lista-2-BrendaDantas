@@ -18,7 +18,7 @@ namespace graal {
  *
  * @param first pointer to the first element of the range.
  * @param last pointer to the position just after the last element of the range.
- * @param value is a value that is received by parameter.
+ * @param value is a memory address that is received by parameter.
  *
  * @return iterator if two elements are equal or return last if they are not equal.
 
