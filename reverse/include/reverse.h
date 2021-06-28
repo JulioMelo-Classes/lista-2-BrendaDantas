@@ -11,18 +11,13 @@ using std::sort;
 namespace graal {
 
 /*! 
- * @brief Function that reverses the order of each element in a range.
-
-  * @tparam BidirIt = iterator to the range.
-  * @param UnaryPredicate = iterator to the predicate.
-  * @param first = pointer that points to the first element of the range.
-  * @param last = pointer that points to the position after the last element.
-  * @param tamanho_range = verifies the size of the range.
-  * @param tam = divides the size of the range in two.
-  * @param iterator3 = runs through the range.
-  * @param cont = run through tam.
-  * @param iterator1 = runs through the range beginning in first.
-  * @param iterator2 = runs through the range beginning in the element of the range.
+  *@brief Function that reverses the order of each element in a range.
+  *
+  * @tparam BidirIt iterator to the range.
+  *
+  * @param first pointer to the first element of the range.
+  * @param last pointer to the position just after the last element of the range.
+  *
  */
 
 template<class BidirIt>
