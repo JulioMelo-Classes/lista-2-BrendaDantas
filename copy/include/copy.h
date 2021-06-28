@@ -14,7 +14,6 @@ namespace graal {
 * @brief Function that copies a range values into a new range that begins in d_first.
  *
  * @tparam InputIt = iterator to the range.
- * @tparam Compare type of a boolean function that compares two elements.
  *
  * @param first pointer to the first element of the range.
  * @param last pointer to the position just after the last element of the range.
