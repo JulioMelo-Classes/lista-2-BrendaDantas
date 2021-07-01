@@ -22,6 +22,9 @@ namespace graal {
  * @return iterator to the first element that satisfy the predicate and if all the elements in the range doesn't satisfy the predicate, return last.
 
  */ 
+ /*
+ blz!
+ */
 template<class InputIt, class UnaryPredicate>
 InputIt find_if(InputIt first, InputIt last, UnaryPredicate p)
 {

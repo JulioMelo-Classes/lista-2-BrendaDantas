@@ -23,6 +23,9 @@ namespace graal {
  * @return iterator if two elements are equal or return last if they are not equal.
 
  */
+ /*
+ blz
+ */
 template<class InputIt, class T, class Equal>
 InputIt find(InputIt first, InputIt last, const T& value, Equal eq)
 {

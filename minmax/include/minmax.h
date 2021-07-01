@@ -23,7 +23,9 @@ namespace graal {
  * @return a std::pair that contains the minor and greater element, in this order. 
  *
  */
-
+/*
+ok
+*/
 template <typename Itr, typename Compare >
 std::pair<Itr, Itr> minmax(Itr first, Itr last, Compare cmp)
 {  
@@ -46,7 +48,7 @@ std::pair<Itr, Itr> minmax(Itr first, Itr last, Compare cmp)
       }
     }
 
-    if (quantidade_maior <= maior_quantidade)
+    if (quantidade_maior <= maior_quantidade) //realmente é uma forma diferente de fazer...
     {
       maior_quantidade = quantidade_maior;
       maior_elemento = it;

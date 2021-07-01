@@ -21,6 +21,9 @@ namespace graal {
  *
  * @return iterator to the new range.
  */
+ /*
+ ok
+ */
 template<class InputIt>
 InputIt copy(InputIt first, InputIt last, InputIt d_first)
 {
@@ -30,7 +33,7 @@ InputIt copy(InputIt first, InputIt last, InputIt d_first)
     d_first++;
     first++;
   }
-    return d_first;
+    return d_first; //indentação!
 }
 
 }

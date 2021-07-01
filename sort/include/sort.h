@@ -20,6 +20,9 @@ namespace graal {
  * @param last pointe to the position just after the last element of the range.
  * @param iterator1 and iterator2 run through the range.
  */
+ /*
+ blz
+ */
 template<class ForwardIt, class Comparison>
 void sort(ForwardIt first, ForwardIt last, Comparison cmp)
 {  

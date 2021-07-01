@@ -22,6 +22,10 @@ namespace graal {
   *
   * @return the iterator1 with the range in a new order.
  */
+
+ /*
+ ok
+ */
 template<class ForwardIt, class UnaryPredicate>
 ForwardIt partition(ForwardIt first, ForwardIt last, UnaryPredicate p)
 { 

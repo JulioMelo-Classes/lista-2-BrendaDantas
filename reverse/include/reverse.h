@@ -19,15 +19,18 @@ namespace graal {
   * @param last pointer to the position just after the last element of the range.
   *
  */
-
+/*
+ok
+*/
 template<class BidirIt>
 void reverse(BidirIt first, BidirIt last)
 { 
   BidirIt iterator = first;
   BidirIt iterator2 = last-1;
   int tamanho_range = 0;
-
-  for (BidirIt iterator3 = first; iterator3 != last; iterator3++) 
+  //vc pode descobrir o tamanho do range fazendo a diferença entre os iterators
+  //tamanho_range = last - first
+  for (BidirIt iterator3 = first; iterator3 != last; iterator3++)  
   {
     tamanho_range++;
   }

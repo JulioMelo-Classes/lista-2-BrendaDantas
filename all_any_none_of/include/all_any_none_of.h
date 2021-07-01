@@ -23,12 +23,15 @@ namespace graal {
   * @return true when the predicate is satisfied and false when this doesn't happens.
 
  */
+ /*
+60% 
+ */
 template<class InputIt, class UnaryPredicate>
 bool all_of(InputIt first, InputIt last, UnaryPredicate p)
 {
   for (InputIt iterator = first; iterator != last; iterator++) 
   {
-    if (p(*iterator)) 
+    if (p(*iterator)) //essa implementação está errada, nesse caso vc tem que garantir que todo mundo faz p ser true e não apenas 1.
     {
       return true;
     }
@@ -77,7 +80,7 @@ bool none_of(InputIt first, InputIt last, UnaryPredicate p)
 {
   for (InputIt iterator = first; iterator != last; iterator++) 
   {
-    if (p(*iterator)) 
+    if (p(*iterator)) //aqui blz
     {
       return false;
     }

@@ -25,6 +25,10 @@ namespace graal {
  * @return iterator to the element just after the last element of the range after all this process.
  
  */
+
+ /*
+ 20%
+ */
 template<class InputIt, class Equal>
 InputIt unique( InputIt first, InputIt last, Equal eq )
 {
@@ -45,7 +49,7 @@ InputIt unique( InputIt first, InputIt last, Equal eq )
     }
     
   }
-    return iterator;
+    return iterator; //vc tá sempre retornando first, não vou considerar a implementação.
 }
 
 }

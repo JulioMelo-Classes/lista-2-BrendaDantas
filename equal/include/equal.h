@@ -22,16 +22,19 @@ namespace graal {
  * @return true when they are equal and false when they aren't.
 
  */
+ /*
+ 10% pela documentação, faltou documentar também a versão sobrecarregada da função
+ */
 template<class InputIt1, class InputIt2, class Equal>
 bool equal(InputIt1 first1, InputIt1 last1, InputIt2 first2, Equal eq)
 {
   while (first1 != last1)
   {
-    if (first1 > first2 || first1 < first2) 
+    if (first1 > first2 || first1 < first2)  //não entendi pq vc está comparando os iterators neste caso...
     {
       break;
     }
-    if (eq(*first1, *first2))
+    if (eq(*first1, *first2)) //os testes falham pq vc só pode dizer que é igual quando todos os elementos no range são iguais, essa função só garante que dois são!
     {      
       return true;
     }
